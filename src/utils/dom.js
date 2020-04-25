@@ -122,13 +122,13 @@ class DOM {
     const footerSpan = el('span', 'Powered by')
 
     const footerLink = el('a', {
-      href: 'https://accept-nano.com',
+      href: 'https://bitcoinblack.info/payment',
       target: '_blank',
       style: `
         padding-left: 5px!important;
         color: #ccc!important;
       `,
-    }, 'accept-nano.com')
+    }, 'https://bitcoinblack.info/payment')
 
     setChildren(this.footer, [footerSpan, footerLink])
   }
@@ -174,7 +174,7 @@ class DOM {
 
     const amount_raw = Big(amount).times(multNANO).toFixed().toString()
 
-    const qrText = `nano:${account}?amount=${amount_raw}`
+    const qrText = `bcb:${account}?amount=${amount_raw}`
     const qrCanvas= el('canvas', {
       style: `
         background: white!important;
@@ -188,7 +188,7 @@ class DOM {
     const accountText = el('p', { style: DOM.sharedStyles.infoText }, account)
 
     const amountHeader = el('h5', { style: DOM.sharedStyles.infoHeader }, 'Amount')
-    const amountText = el('p', { style: DOM.sharedStyles.infoText }, `${amount} NANO`)
+    const amountText = el('p', { style: DOM.sharedStyles.infoText }, `${amount} BCB`)
 
     const paymentInfo = el('div', [accountHeader, accountText, amountHeader, amountText])
 
