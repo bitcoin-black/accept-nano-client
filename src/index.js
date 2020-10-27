@@ -131,7 +131,7 @@ class AcceptNano {
       return
     }
 
-    console.log(`ACCEPT NANO -> ${message}`, payload)
+    console.log(`ACCEPT BCB -> ${message}`, payload)
   }
 }
 
